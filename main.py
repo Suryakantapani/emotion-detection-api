@@ -19,7 +19,7 @@ class_names = [
 face_cascade = cv2.CascadeClassifier(
     cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
 )
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def home():
     return {"message": "Emotion Detection API is running"}
 
